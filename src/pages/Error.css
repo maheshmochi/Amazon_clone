@@ -1,0 +1,95 @@
+/* ---------- ERROR PAGE ---------- */
+.error-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f5f5, #ffd500);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: #111;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* ---------- Animated 404 ---------- */
+.error-page h1 {
+  font-size: 120px;
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(90deg, #ffd500, #ff9500, #febd69, #ff9500);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease infinite;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Subtitle ---------- */
+.error-page p {
+  margin: 16px 0;
+  font-weight: 600;
+  font-size: 18px;
+  z-index: 2;
+  position: relative;
+}
+
+/* ---------- Go Home Button ---------- */
+.error-page a {
+  padding: 12px 24px;
+  background: #ffd500;
+  color: #111;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.error-page a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ---------- Gradient Animation ---------- */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Floating Particles (Optional) ---------- */
+.error-page::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 2%, transparent 2%) repeat;
+  background-size: 50px 50px;
+  animation: floatParticles 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes floatParticles {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .error-page h1 {
+    font-size: 80px;
+  }
+  .error-page p {
+    font-size: 16px;
+  }
+  .error-page a {
+    padding: 10px 18px;
+  }
+}

@@ -1,0 +1,222 @@
+/* ---------- RESET & BASE ---------- */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(180deg, #f3f3f3 0%, #ffffff 100%);
+}
+
+/* ---------- PAGE CENTER ---------- */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: linear-gradient(180deg, #f3f3f3 0%, #ffffff 100%);
+}
+
+/* ---------- CARD ---------- */
+.login-card {
+  width: 360px;
+  max-width: 96%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 28px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* ---------- BRAND ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 92px;
+  height: 28px;
+  background: linear-gradient(90deg, #ffb84d, #ff9900);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  font-size: 14px;
+}
+
+.brand h1 {
+  font-size: 16px;
+  color: #111;
+}
+
+.brand p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* ---------- FORM ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: #111;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff9900;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.12);
+}
+
+/* ---------- SIGN-IN BUTTON ---------- */
+.signin-btn {
+  background: linear-gradient(90deg, #ffd500, #ff9500);
+  border: none;
+  color: #111;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signin-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 165, 0, 0.4);
+}
+
+/* ---------- ROW ---------- */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.muted {
+  font-size: 13px;
+  color: #666;
+}
+
+.link {
+  color: #0066c0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- DIVIDER ---------- */
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 18px 0;
+}
+
+/* ---------- CREATE ACCOUNT ---------- */
+.create-account {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  background: #f7f7f7;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.create-account:hover {
+  background: #ffd500;
+  border-color: #ff9900;
+  color: #111;
+  transform: scale(1.02);
+}
+
+/* ---------- HELP TEXT ---------- */
+.help {
+  font-size: 12px;
+  color: #666;
+}
+
+.help.error {
+  color: #b00020;
+  margin-top: 4px;
+}
+
+.terms {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 420px) {
+  .login-card {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 84px;
+    height: 26px;
+  }
+}
+
+/* ✅ Back Button */
+.error-page .back-btn {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.error-page .back-btn:hover {
+  background-color: #e68900;
+}
